@@ -14,19 +14,19 @@ class Vehiculo {
 
     }
 
-    static enMovimiento() {
+    enMovimiento() {
         this.enMovimiento = true;
         this.enReposo = false;
-        return 'Me encuentro en movimiento';
+        console.log('Me encuentro en movimiento');
     }
-    static enReposo() {
+    enReposo() {
         this.enMovimiento = false;
         this.enReposo = true;
-        return 'Me encuentro en reposo';
+        console.log('Me encuentro en reposo');
     }
 
-    /* moverse() {
-        return 'Soy un vehiculo ' + this.tipo;
+    static definicion() {
+        return 'Vehiculo: Aparato con o sin motor que se mueve sobre el suelo, en el agua o el aire y sirve para transportar cosas o personas'
     }
 
     velocidadMaxima() {
@@ -36,7 +36,7 @@ class Vehiculo {
     metodoDeAceleracion() {
 
     }
- */
+
 }
 
 class Automovil extends Vehiculo {
@@ -51,6 +51,14 @@ class Automovil extends Vehiculo {
 
     }
 
+    encender() {
+        enMovimiento();
+    }
+
+    apagar() {
+        enReposo();
+    }
+
     presentarse() {
         return 'this.nombreVehiculo' + ' : ' + this.nombreVehiculo + ' , ' +
             'this.marca' + ' : ' + this.marca + ' , ' +
@@ -62,6 +70,10 @@ class Automovil extends Vehiculo {
             'this.usaRuedas' + ' : ' + this.usaRuedas + ' , ' +
             'this.noDeRuedas' + ' : ' + this.noDeRuedas + ' , ' +
             'this.tipoMotor' + ' : ' + this.tipoMotor;
+    }
+
+    static definicionAutomovil() {
+        return 'Aparato con motor que se mueve sobre el suelo, sirve para transportar cosas o personas'
     }
 
 
@@ -77,6 +89,14 @@ class Avion extends Vehiculo {
 
     }
 
+    encender() {
+        super.enMovimiento();
+    }
+
+    apagar() {
+        super.enReposo();
+    }
+
     presentarse() {
         return 'this.nombreVehiculo' + ' : ' + this.nombreVehiculo + ' , ' +
             'this.marca' + ' : ' + this.marca + ' , ' +
@@ -88,6 +108,10 @@ class Avion extends Vehiculo {
             'this.usaRuedas' + ' : ' + this.usaRuedas + ' , ' +
             'this.noDeRuedas' + ' : ' + this.noDeRuedas + ' , ' +
             'this.tipoMotor' + ' : ' + this.tipoMotor;
+    }
+
+    static definicionAvion() {
+        return 'Aparato con motor que se mueve sobre el aire, sirve para transportar cosas o personas'
     }
 }
 
@@ -114,6 +138,10 @@ class Bote extends Vehiculo {
             'this.noDeRuedas' + ' : ' + this.noDeRuedas + ' , ' +
             'this.tipoMotor' + ' : ' + this.tipoMotor;
     }
+
+    static definicionBote() {
+        return 'Aparato con o sin motor que se mueve sobre el agua, sirve para transportar cosas o personas'
+    }
 }
 
 class Bicicleta extends Vehiculo {
@@ -138,6 +166,12 @@ class Bicicleta extends Vehiculo {
             'this.noDeRuedas' + ' : ' + this.noDeRuedas + ' , ' +
             'this.tipoMotor' + ' : ' + this.tipoMotor;
     }
+
+
+
+    static definicionBicicleta() {
+        return 'Aparato con o sin motor que se mueve sobre el suelo, sirve para transportar cosas o personas'
+    }
 }
 
 class Motocicleta extends Bicicleta {
@@ -148,6 +182,14 @@ class Motocicleta extends Bicicleta {
         this.noDeRuedas = noDeRuedas;
         this.tipoMotor = tipoMotor;
 
+    }
+
+    encender() {
+        enMovimiento();
+    }
+
+    apagar() {
+        enReposo();
     }
 
     presentarse() {
@@ -161,6 +203,10 @@ class Motocicleta extends Bicicleta {
             'this.usaRuedas' + ' : ' + this.usaRuedas + ' , ' +
             'this.noDeRuedas' + ' : ' + this.noDeRuedas + ' , ' +
             'this.tipoMotor' + ' : ' + this.tipoMotor;
+    }
+
+    static definicionMotocicleta() {
+        return 'Aparato con motor que se mueve sobre el suelo, sirve para transportar cosas o personas'
     }
 }
 
