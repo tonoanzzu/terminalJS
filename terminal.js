@@ -59,6 +59,10 @@ class Automovil extends Vehiculo {
         enReposo();
     }
 
+    metodoDeAceleracion() {
+        return 'Mi metodo de acelerar es ' + this.metodoAceleracion
+    }
+
     presentarse() {
         return 'this.nombreVehiculo' + ' : ' + this.nombreVehiculo + ' , ' +
             'this.marca' + ' : ' + this.marca + ' , ' +
@@ -95,6 +99,10 @@ class Avion extends Vehiculo {
 
     apagar() {
         super.enReposo();
+    }
+
+    metodoDeAceleracion() {
+        return 'Mi metodo de acelerar es ' + this.metodoAceleracion
     }
 
     presentarse() {
@@ -139,6 +147,10 @@ class Bote extends Vehiculo {
             'this.tipoMotor' + ' : ' + this.tipoMotor;
     }
 
+    metodoDeAceleracion() {
+        return 'Mi metodo de acelerar es ' + this.metodoAceleracion
+    }
+
     static definicionBote() {
         return 'Aparato con o sin motor que se mueve sobre el agua, sirve para transportar cosas o personas'
     }
@@ -152,6 +164,10 @@ class Bicicleta extends Vehiculo {
         this.noDeRuedas = noDeRuedas;
         this.tipoMotor = tipoMotor;
 
+    }
+
+    metodoDeAceleracion() {
+        return 'Mi metodo de acelerar es ' + this.metodoAceleracion
     }
 
     presentarse() {
@@ -190,6 +206,10 @@ class Motocicleta extends Bicicleta {
 
     apagar() {
         enReposo();
+    }
+
+    metodoDeAceleracion() {
+        return 'Mi metodo de acelerar es ' + this.metodoAceleracion
     }
 
     presentarse() {
