@@ -147,6 +147,14 @@ class Bote extends Vehiculo {
             'this.tipoMotor' + ' : ' + this.tipoMotor;
     }
 
+    navegar() {
+        super.enMovimiento();
+    }
+
+    anclar() {
+        super.enReposo();
+    }
+
     metodoDeAceleracion() {
         return 'Mi metodo de acelerar es ' + this.metodoAceleracion
     }
@@ -181,6 +189,14 @@ class Bicicleta extends Vehiculo {
             'this.usaRuedas' + ' : ' + this.usaRuedas + ' , ' +
             'this.noDeRuedas' + ' : ' + this.noDeRuedas + ' , ' +
             'this.tipoMotor' + ' : ' + this.tipoMotor;
+    }
+
+    andar() {
+        super.enMovimiento();
+    }
+
+    parar() {
+        super.enReposo();
     }
 
 
